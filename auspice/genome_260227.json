@@ -2,7 +2,7 @@
   "version": "v2",
   "meta": {
     "title": "Phylodynamic analysis of soybean dwarf virus",
-    "updated": "2026-03-03",
+    "updated": "2026-02-27",
     "data_provenance": [
       {
         "name": "GenBank",
@@ -82,7 +82,7 @@
         "type": "CDS"
       }
     },
-    "description": "# SbDV genome phylogenetic tree\n\nThis page describes the phylogenetic tree of **Soybean dwarf virus (SbDV)** genomes.\n\nThe workflow and results presented here are **preliminary** and remain under active development and refinement.\n\n#### Data visualization keys\n\n- **Date:** Information was obtained primarily from NCBI metadata and supplemented with data from [Stone et al. 2024](https://doi.org/10.1016/j.virol.2024.109984).\n- **Region, Country:** Information was obtained primarily from NCBI metadata and supplemented with data from [Stone et al. 2024](https://doi.org/10.1016/j.virol.2024.109984).\n- **Division:** Subnational location information below the country level, such as **states** in the United States or **prefectures** in Japan. Information was obtained primarily from NCBI metadata and supplemented with data from [Stone et al. 2024](https://doi.org/10.1016/j.virol.2024.109984).\n- **Host:** Information was obtained primarily from NCBI metadata and supplemented with data from [Stone et al. 2024](https://doi.org/10.1016/j.virol.2024.109984).\n- **Vector:**\n  - **Ac. pisum:** *Acyrthosiphon pisum*, commonly known as the pea aphid.\n  - **A. solani:** *Aulacorthum solani*, commonly known as the foxglove aphid or greenhouse potato aphid.\n  - Isolates labeled **\"(predicted)\"** were not experimentally tested for vector transmission, but were inferred to be transmitted by the indicated vector based on the N-terminal region of the readthrough protein. This information was derived from [Stone et al. 2024](https://doi.org/10.1016/j.virol.2024.109984).\n- **Symptoms:** Information was derived from [Stone et al. 2024](https://doi.org/10.1016/j.virol.2024.109984).\n\n#### Analysis\n\nThe bioinformatics workflow includes:\n\n- Initial sequence filtering using [augur filter](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/filter.html)\n- Sequence alignment using [augur align](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/align.html), with [MAFFT](https://academic.oup.com/nar/article/30/14/3059/2904316) selected as the aligner, followed by indexing with [augur index](https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/index.html)\n- Phylogenetic reconstruction using [IQ-TREE 2](http://www.iqtree.org/)\n- Ancestral state reconstruction and temporal inference using [TreeTime](https://github.com/neherlab/treetime)\n- Visualization using [Auspice](https://docs.nextstrain.org/projects/auspice/en/stable/)\n\n#### Underlying data\n\nWe initially downloaded sequence data using the ingest workflow with the SbDV taxonomic ID (). The downloaded dataset was then compared with the recent comprehensive SbDV phylogenetic study by [Stone et al. 2024](https://doi.org/10.1016/j.virol.2024.109984). Sequences missing from the initial dataset were supplemented with all accessions reported in that study. Metadata from NCBI were combined with metadata from Stone et al. 2024 using a custom R script.\n\n#### Acknowledgements\n\nWe thank the authors and laboratories that shared their sequences and metadata through public databases. We also thank the Nextstrain team for their guidance and for maintaining the Nextstrain tools and platform.",
+    "description": "",
     "colorings": [
       {
         "key": "gt",
@@ -176,42 +176,62 @@
       {
         "key": "region",
         "demes": {
+          "West Asia": {
+            "latitude": 34.000094,
+            "longitude": 48.73228
+          },
           "Europe": {
             "latitude": 49.646237,
             "longitude": 10.799454
-          },
-          "Oceania": {
-            "latitude": -25.0562891,
-            "longitude": 152.008576
-          },
-          "Asia": {
-            "latitude": 35.000074,
-            "longitude": 104.999927
           },
           "North America": {
             "latitude": 28.2367447,
             "longitude": -97.738017
           },
-          "West Asia": {
-            "latitude": 34.000094,
-            "longitude": 48.73228
+          "Asia": {
+            "latitude": 35.000074,
+            "longitude": 104.999927
+          },
+          "Oceania": {
+            "latitude": -25.0562891,
+            "longitude": 152.008576
           }
         }
       },
       {
         "key": "country",
         "demes": {
+          "United Kingdom": {
+            "latitude": 54.242833,
+            "longitude": -2.088739
+          },
+          "Japan": {
+            "latitude": 35.68536,
+            "longitude": 139.75309
+          },
           "Ireland": {
             "latitude": 52.865,
             "longitude": -7.979
+          },
+          "Australia": {
+            "latitude": -24.7761085,
+            "longitude": 134.755
           },
           "Czech Republic": {
             "latitude": 49.8175,
             "longitude": 15.473
           },
-          "Australia": {
-            "latitude": -24.7761085,
-            "longitude": 134.755
+          "South Korea": {
+            "latitude": 36.609249,
+            "longitude": 127.917932
+          },
+          "Germany": {
+            "latitude": 51.1657,
+            "longitude": 10.4515
+          },
+          "New Zealand": {
+            "latitude": -41.500083,
+            "longitude": 172.8344077
           },
           "USA": {
             "latitude": 38.916963,
@@ -221,74 +241,62 @@
             "latitude": 34.6401861,
             "longitude": 39.0494106
           },
-          "United Kingdom": {
-            "latitude": 54.242833,
-            "longitude": -2.088739
-          },
-          "New Zealand": {
-            "latitude": -41.500083,
-            "longitude": 172.8344077
-          },
-          "Germany": {
-            "latitude": 51.1657,
-            "longitude": 10.4515
-          },
           "Slovenia": {
             "latitude": 45.8133113,
             "longitude": 14.4808369
-          },
-          "South Korea": {
-            "latitude": 36.609249,
-            "longitude": 127.917932
-          },
-          "Japan": {
-            "latitude": 35.68536,
-            "longitude": 139.75309
           }
         }
       },
       {
         "key": "division",
         "demes": {
-          "Pennsylvania": {
-            "latitude": 41.2033,
-            "longitude": -77.1945
-          },
-          "Carlow": {
-            "latitude": 52.69053605,
-            "longitude": -6.8250188975846555
-          },
-          "Virginia": {
-            "latitude": 37.926868,
-            "longitude": -78.024902
+          "Aleppo": {
+            "latitude": 36.151747900000004,
+            "longitude": 37.39349996674963
           },
           "New York": {
             "latitude": 40.703395,
             "longitude": -73.904193
           },
-          "Mississippi": {
-            "latitude": 32.9715645,
-            "longitude": -89.7348497
+          "Iowa": {
+            "latitude": 41.878,
+            "longitude": -93.0977
           },
-          "Aleppo": {
-            "latitude": 36.151747900000004,
-            "longitude": 37.39349996674963
-          },
-          "Tasmania": {
-            "latitude": -42.14220555,
-            "longitude": 146.6723517878467
+          "Maryland": {
+            "latitude": 39.0458,
+            "longitude": -76.6413
           },
           "Kentucky": {
             "latitude": 37.64954,
             "longitude": -85.45019
           },
-          "South Carolina": {
-            "latitude": 33.8361,
-            "longitude": -81.1637
+          "Virginia": {
+            "latitude": 37.926868,
+            "longitude": -78.024902
+          },
+          "Iwate": {
+            "latitude": 39.9724169,
+            "longitude": 141.2124422
+          },
+          "Tasmania": {
+            "latitude": -42.14220555,
+            "longitude": 146.6723517878467
+          },
+          "Carlow": {
+            "latitude": 52.69053605,
+            "longitude": -6.8250188975846555
+          },
+          "Mississippi": {
+            "latitude": 32.9715645,
+            "longitude": -89.7348497
           },
           "North Carolina": {
             "latitude": 35.7596,
             "longitude": -79.0193
+          },
+          "South Carolina": {
+            "latitude": 33.8361,
+            "longitude": -81.1637
           },
           "Hokkaido": {
             "latitude": 43.2203,
@@ -298,21 +306,13 @@
             "latitude": 44.535145,
             "longitude": -89.527762
           },
+          "Pennsylvania": {
+            "latitude": 41.2033,
+            "longitude": -77.1945
+          },
           "Warwick": {
             "latitude": 32.2684491,
             "longitude": -64.8029460512908
-          },
-          "Maryland": {
-            "latitude": 39.0458,
-            "longitude": -76.6413
-          },
-          "Iowa": {
-            "latitude": 41.878,
-            "longitude": -93.0977
-          },
-          "Iwate": {
-            "latitude": 39.9724169,
-            "longitude": 141.2124422
           }
         }
       }
